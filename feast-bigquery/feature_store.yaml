@@ -1,0 +1,6 @@
+project: domino_feast
+registry: data/registry.db
+provider: local
+offline_store:
+    type: bigquery
+entity_key_serialization_version: 2
