@@ -1,0 +1,12 @@
+project: domino_feast
+registry: data/registry.db
+provider: local
+offline_store:
+    type: redshift
+    cluster_id: "redshift-cluster-regression"
+    region: us-west-2
+    user: ${FEAST_REDSHIFT_USER}
+    database: dev
+    s3_staging_location: s3://s3regression/driver_stats.parquet
+    iam_role: arn:aws:iam::961743926442:user/system_test_user
+entity_key_serialization_version: 2
