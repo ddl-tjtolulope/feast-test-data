@@ -3,7 +3,7 @@ registry: data/registry.db
 provider: local
 offline_store:
     type: redshift
-    cluster_id: "redshift-cluster-regression"
+    cluster_id: redshift-cluster-regression
     region: us-west-2
     user: ${FEAST_REDSHIFT_USER}
     database: dev
