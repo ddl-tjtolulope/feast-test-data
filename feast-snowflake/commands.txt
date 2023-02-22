@@ -1,1 +1,5 @@
 feast materialize 2022-09-15T19:20:01 2023-01-15T19:20:01
+
+
+CURRENT_TIME=$(date -u +"%Y-%m-%dT%H:%M:%S")
+feast materialize 2022-09-15T19:20:01 $CURRENT_TIME
