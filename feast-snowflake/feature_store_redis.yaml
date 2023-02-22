@@ -10,11 +10,6 @@ offline_store:
     role: SYSADMIN
     warehouse: DOMINODATALAB
 online_store:
-    type: snowflake.online
-    account: kma55258
-    role: SYSADMIN
-    warehouse: DOMINODATALAB
-    database: JOYCE
-    user: ${FEAST_SNOWFLAKE_USER}
-    password: ${FEAST_SNOWFLAKE_PASSWORD}
+    type: redis
+    connection_string: redis-19004.c1.us-east1-2.gce.cloud.redislabs.com:19004,password=${REDIS_PASSWORD}
 entity_key_serialization_version: 2
