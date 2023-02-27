@@ -11,5 +11,6 @@ offline_store:
     warehouse: DOMINODATALAB
 online_store:
     type: redis
+    redis_type: redis
     connection_string: redis-19004.c1.us-east1-2.gce.cloud.redislabs.com:19004,password=${REDIS_PASSWORD}
 entity_key_serialization_version: 2
