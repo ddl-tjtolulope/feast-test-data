@@ -9,7 +9,7 @@ class DriverRankingModel:
         self.model = load("driver_model.bin")
 
         # Set up feature store
-        self.fs = feast.FeatureStore(repo_path=".")
+        self.fs = feast.FeatureStore(repo_path="/repos/feast-snowflake")
 
     def predict(self, driver_ids):
         # Read features from Feast
@@ -31,6 +31,20 @@ class DriverRankingModel:
 
         # return best driver
         return best_driver_id
+
+
+def predict(drivers):
+    print("-------")
+    print(f"drivers: {drivers}")
+    print("-------")
+
+
+    model = DriverRankingModel()
+    best_driver = model.predict(drivers)
+    print("-------")
+    print(f"best driver: {best_driver}")
+    print("-------")
+    return dict(driver= str(best_driver))
 
 
 if __name__ == "__main__":
