@@ -70,4 +70,17 @@ The required environment variables can be found in the feature_store.yaml file. 
 <p align="center">
 <img src = readme_images/modelapi.png width="800">
 </p>
+
+
 ## Section 8 - Model monitoring
+
+Checked the required configuration for model monitoring, we need to create domino training set for the predict data. This can be done by adding code to `train.py` following the example from the documentation.  And upload the ground truth data to a datasource.
+
+Feature store access is done in Model API which is already verified in `Section 7`. So there should be no problem doing model monitoring for models using features from feature store.
+
+
+
+## To check if we can use Feature store in Domino, ask the following questions
+* Does the component has required feast libraries installed?
+* Does the component support imported git repos?
+* Does the component support environment variables?
