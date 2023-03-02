@@ -36,11 +36,19 @@ Make sure to sync those changes to domino.
 
 Start a job to run the `train.py` script
 
+<p align="center">
+<img src = readme_images/trainmodel.png width="800">
+</p>
+
 ## Section 6 - Periodically materialize data to online store
 
 Copy the script file https://github.com/ddl-joyce-zhao/feast-test-data/blob/main/driver_stats_performance/materialize.sh to the folder /mnt/driver_stats_performance.
 
 Start a scheduled job to periodically materialize data to online store.
+
+<p align="center">
+<img src = readme_images/materialize.png width="800">
+</p>
 
 ## Section 7 - Publish the model to use online features for prediction
 
@@ -53,8 +61,13 @@ In the model's Settings page, make sure adding the required environment variable
 * FEAST_SNOWFLAKE_ONLINE_USER
 * FEAST_SNOWFLAKE_ONLINE_PASSWORD
 
+<p align="center">
+<img src = readme_images/environment.png width="800">
+</p>
 
 The required environment variables can be found in the feature_store.yaml file. In the domino workspace and job, these have been set properly from user environment variables. But in the model API, they have to be set manually.
 
-
+<p align="center">
+<img src = readme_images/modelapi.png width="800">
+</p>
 ## Section 8 - Model monitoring
