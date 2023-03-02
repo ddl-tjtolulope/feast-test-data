@@ -7,9 +7,13 @@
 https://dominodatalab.atlassian.net/wiki/spaces/~802751909/pages/2042331195/Datasources+and+Where+to+Find+Them#Snowflake
 Note, raw data has been added to the Snow flake data source FEAST database table DRIVER_STATS
 
+<p align="center">
+<img src = readme_images/snowflakefeaturestore.png width="800">
+</p>
 
-## Section 2 - Enable feature store to a demo project
+## Section 2 - Enable feature store for a project
 
+When enabling feature store for a project, need to type in the credentials for both online store and offline store.
 
 ## Section 3 - Define and publish features
 
@@ -87,4 +91,4 @@ Feature store access is done in Model API which is already verified in `Section 
 
 Currently feature store access in Domino workspace and job is smooth. There is no extra manual step as long as the feature store is enabled for the project properly.
 
-Accessing feature store in ModelAPI requires extra steps to set up the environment variable manually. 
+Accessing feature store in ModelAPI requires extra steps to set up the environment variable manually.
