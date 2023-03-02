@@ -84,3 +84,7 @@ Feature store access is done in Model API which is already verified in `Section 
 * Does the component has required feast libraries installed?
 * Does the component support imported git repos?
 * Does the component support environment variables?
+
+Currently feature store access in Domino workspace and job is smooth. There is no extra manual step as long as the feature store is enabled for the project properly.
+
+Accessing feature store in ModelAPI requires extra steps to set up the environment variable manually. 
