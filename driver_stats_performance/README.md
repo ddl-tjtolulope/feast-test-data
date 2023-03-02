@@ -20,7 +20,7 @@ https://github.com/ddl-joyce-zhao/feast-test-data/blob/main/feast-snowflake/feat
 
 ## Section 4 - Create the driver performance model
 
-In the workspace, create a folder under /mnt/driver_stats_performance.
+In the workspace, create a folder under ``/mnt/driver_stats_performance`.
 
 Create the train script which will use the historical features.
 https://github.com/ddl-joyce-zhao/feast-test-data/blob/main/driver_stats_performance/train.py
@@ -34,7 +34,7 @@ Make sure to sync those changes to domino.
 
 ## Section 5 - Train the model
 
-Start a job to run the train.py script
+Start a job to run the `train.py` script
 
 ## Section 6 - Periodically materialize data to online store
 
@@ -48,10 +48,10 @@ Create a Model API to call the function `predict` of the file `driver_performanc
 
 In the model's Settings page, make sure adding the required environment variables
 
-FEAST_SNOWFLAKE_USER
-FEAST_SNOWFLAKE_PASSWORD
-FEAST_SNOWFLAKE_ONLINE_USER
-FEAST_SNOWFLAKE_ONLINE_PASSWORD
+* FEAST_SNOWFLAKE_USER
+* FEAST_SNOWFLAKE_PASSWORD
+* FEAST_SNOWFLAKE_ONLINE_USER
+* FEAST_SNOWFLAKE_ONLINE_PASSWORD
 
 
 The required environment variables can be found in the feature_store.yaml file. In the domino workspace and job, these have been set properly from user environment variables. But in the model API, they have to be set manually.
