@@ -6,9 +6,15 @@ from joblib import load
 class DriverRankingModel:
     def __init__(self):
         # Load model
-        self.model = load("driver_model.bin")
+        self.model = load("driver_selection/driver_model.bin")
 
         # Set up feature store
+        #
+
+        # Set up from workspace or Job
+        #self.fs = feast.FeatureStore(repo_path="/features/feast-snowflake")
+
+        # Set up from ModelAPI
         self.fs = feast.FeatureStore(repo_path="/repos/feast-snowflake")
 
     def predict(self, driver_ids):

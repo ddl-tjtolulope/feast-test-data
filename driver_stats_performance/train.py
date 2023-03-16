@@ -5,10 +5,6 @@ from sklearn.linear_model import LinearRegression
 from datetime import datetime
 
 # Load driver order data
-# orders = pd.read_csv("orders/driver_orders.csv", sep=",")
-# orders["event_timestamp"] = pd.to_datetime(orders["event_timestamp"])
-# orders["DRIVER_ID"] = pd.to_datetime(orders["driver_id"])
-
 entity_df = pd.DataFrame.from_dict(
     {
         "DRIVER_ID": [1001, 1002, 1003, 1004, 1001],
@@ -25,11 +21,10 @@ entity_df = pd.DataFrame.from_dict(
 )
 
 # Connect to your feature store provider
-fs = feast.FeatureStore(repo_path=".")
+fs = feast.FeatureStore(repo_path="/features/feast-snowflake")
 
-# print(orders.info())
 
-# Retrieve training data from BigQuery
+# Retrieve training data from Snowflake
 training_df = fs.get_historical_features(
     entity_df=entity_df,
     features=[
@@ -55,4 +50,4 @@ train_Y = training_df.loc[:, target]
 reg.fit(train_X[sorted(train_X)], train_Y)
 
 # Save model
-dump(reg, "driver_model.bin")
+dump(reg, "driver_selection/driver_model.bin")
